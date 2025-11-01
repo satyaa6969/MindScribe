@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Login from './components/Login';
-import Dashboard from './components/Dashboard'; // <-- Import Dashboard
+import Dashboard from './components/dashboard'; // <-- Import Dashboard
 import './App.css';
 
 function App() {
