@@ -153,6 +153,10 @@ REST_FRAMEWORK = {
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
-    "http://localhost:5174",
     "http://127.0.0.1:5173",
 ]
+
+# Read the live frontend URL from a Render environment variable
+RENDER_FRONTEND_URL = os.environ.get('RENDER_FRONTEND_URL')
+if RENDER_FRONTEND_URL:
+    CORS_ALLOWED_ORIGINS.append(RENDER_FRONTEND_URL)
